@@ -149,6 +149,9 @@ class Thermostat(ClimateDevice):
     @property
     def state(self):
         """Return the current state."""
+        if operation_mode == 'off':
+            return STATE_OFF
+
         status = self.thermostat['equipmentStatus']
         if status == '':
             return STATE_IDLE
@@ -260,7 +263,7 @@ class Thermostat(ClimateDevice):
 
     @property
     def operation_mode(self):
-        """Return current operation ie. heat, cool, auto."""
+        """Return current operation ie. heat, cool, auto or off."""
         return self.thermostat['settings']['hvacMode']
 
     @property
