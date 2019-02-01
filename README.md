@@ -11,11 +11,9 @@ this is a replacement for the original ecobee.py that corrects the reporting of 
 ### installation
 instead of using a custom component i chose to replace the existing ecobee.py which is shipped as part of ecobee. yes this means every time you upgrade homeassistant you'll need to deal with this file.
 
-install the new ecobee.py into components/climate directory of your homeassistant installation.
+install the new ecobee.py into components/climate directory of your homeassistant installation.  example: if your homeassistant is installed in /srv/homeassistant then the replacment ecobee.py file would go into /srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/climate (this is the standard path for a python venv installation on a raspberry pi).
 
-example: if your homeassistant is installed in /srv/homeassistant then the replacment ecobee.py file would go into /srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/climate
-
-in the images below i have four thermostats (4 zones).  2nd floor, living room and dining room are all ecobees. the basement thermostat is an esp8266/relay/oled panel that i made myself and uses a modified mqtt climate component.
+in the images below i have four thermostats (4 zones).  2nd floor, living room and dining room are all ecobees. the basement thermostat is an esp8266/relay/oled display that i made myself and uses a modified mqtt climate component (the original component also suffers from the STATE vs MODE issue).
 
 this is the uncorrected version being reporting by homeassistant
 ![alt text][ecobee_wrong]
