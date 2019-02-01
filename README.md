@@ -15,4 +15,6 @@ install the new ecobee.py into components/climate directory of your homeassistan
 
 example: if your homeassistant is installed in /srv/homeassistant then the replacment ecobee.py file would go into /srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/climate
 
-[logo]: images/thermostat02.png "incorrect example"
+![alt text][tstat02]
+
+[tstat02]: images/thermostat02.png "incorrect example"
